@@ -1,0 +1,26 @@
+/* pages/index/index.wxss */
+
+.bar {
+  background: #f7f7f8;
+  height: 96rpx;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-menu {
+  width: 48rpx;
+  height: 48rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAA40lEQVRYhe2VPQqDQBBGP6PGH7AwjZfQY5hDGyHeI4JoYyUWFkZETbRMXIaQBbeY10wxsPvYmY/V+v65QCFORwt8wkIULETBQhQsRKGckCFqNE2DJEmQ5w9M0yTtQtd1EcdXhGEI0zS/+proL2vbFl3XYVnkfnXjOCIIAniet9sXjsy2bei6Ll1oPdcwhIMRv9BRKLfULEQh3K6yLJFld1RVJTX2juNssY+i6LfYD8OwRX+tMrGsM3z/8q7Wbp9TRsFCFMKU1XWNNL2hKArM8yztQk7Zvyi3QyxEwUIULETBQhQvo5RgzephYzkAAAAASUVORK5CYII=) no-repeat center center/100% auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  width: 340rpx;
+  height: 720rpx;
+}

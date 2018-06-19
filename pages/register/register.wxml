@@ -1,0 +1,22 @@
+<!--pages/register/register.wxml-->
+
+<view class="wrap loginPage">
+  <view id="username_login" class="login-wrap login-wrap-active">
+    <view class="input-container">
+      <view class="txt-username">姓名</view>
+      <input bindinput="updateFormData" data-key="firstname" class="acc-input username txt-input J_ping" type="text" value="{{formData.firstname}}" placeholder="请输入姓名" />
+    </view>
+    <view class="input-container">
+      <view class="txt-username">邮箱</view>
+      <input bindinput="updateFormData" data-key="email" class="acc-input username txt-input J_ping" type="text" value="{{formData.email}}" placeholder="请输入邮箱" />
+    </view>
+    <view class="input-container">
+      <view class="txt-password">密码</view>
+      <input bindinput="updateFormData" data-key="password" type="password" value="{{formData.password}}" class="acc-input password txt-input J_ping" placeholder="请输入密码" autocomplete="off" />
+    </view>
+    <view class="notice"></view>
+    <view id="loginBtn" bindtap="submit" class="btn J_ping {{(formData.email&&formData.password&&formData.firstname)?'btn-active':''}}">注 册</view>
+  </view>
+</view>
+<!-- <input wx:for="{{formData}}" type="text" placeholder="{{index}}" bindinput="updateFormData" data-key="{{index}}" value="{{item}}"></input> -->
+<!-- <view style="width:260rpx;height:60rpx;background:url(data:image/gif;base64,{{captchaPic}}) no-repeat center center/100% auto"></view>  -->

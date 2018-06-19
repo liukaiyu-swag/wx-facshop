@@ -1,0 +1,135 @@
+/* pages/product_list/product_list.wxss */
+
+.li .item {
+  height: 254rpx;
+  padding-top: 10rpx;
+  overflow: hidden;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+
+.li .pic {
+  float: left;
+  height: 240rpx;
+  width: 240rpx;
+  background: no-repeat center center / 100% auto;
+  background-origin: content-box;
+}
+
+.li .content {
+  width: 510rpx;
+  line-height: 40rpx;
+  padding: 0 20rpx 16rpx 20rpx;
+  color: #333;
+  float: left;
+}
+
+.li .name {
+  font-size:28rpx;
+  height: 76rpx;
+  margin-top: 16rpx;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.li .price {
+  padding-top: 30rpx;
+  font-size:36rpx;
+  color: #e93b3d;
+}
+
+.li .symbol {
+  display: inline-block;
+  font-size: 24rpx;
+}
+
+.pro_filter {
+  height: 80rpx;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+
+.pro_filter_items {
+  padding: 16rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pro_filter_items .item {
+  padding: 0 20rpx;
+  font-size: 27rpx;
+  flex: 1;
+  text-align: center;
+}
+
+.item_options {
+  display: none;
+  background: #fff;
+}
+
+.item_options .selection {
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1000;
+}
+
+.selection .J_ping {
+  line-height: 90rpx;
+  background: #fff;
+  height: 90rpx;
+  font-size: 28rpx;
+  padding: 0 70rpx 0 40rpx;
+}
+
+.J_ping.active {
+  color: #e93b3d;
+}
+
+.filter-box.active {
+  display: block;
+  animation: show 0.6s ease forwards;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.filter-box {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000000;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.filter-box-inner {
+  font-size: 28rpx;
+  float: right;
+  width: 544rpx;
+  background: #e8e8ed;
+  min-height: 100vh;
+}
+
+.item-title {
+  padding: 0 20rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #fff;
+  margin: 30rpx 0 0 0;
+}
+
+.filter-box-inner .li {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 1px solid #eee;
+  padding: 0 60rpx;
+  background: #fff;
+}

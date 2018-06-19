@@ -1,0 +1,100 @@
+<!--pages/login/login.wxml-->
+<view class="page">
+  <view class="login-tab" style="display:block">
+    <view class="username-login login-selected J_ping">
+      <view id="account_login_txt">账号密码登录</view>
+    </view>
+    <!-- <view class="sms-login J_ping">
+      <view id="sms_login_txt">短信验证码登录</view>
+    </view> -->
+  </view>
+  <view class="wrap loginPage">
+    <view id="username_login" class="login-wrap login-wrap-active">
+      <view class="input-container">
+        <view class="txt-username">账号</view>
+        <input bindinput="updateFormData" data-key="email" class="acc-input username txt-input J_ping" type="text" value="{{formData.email}}" placeholder="用户名/邮箱/已验证手机" />
+        <!-- <view class="icon icon-clear" style="display: none;"></view> -->
+      </view>
+      <view class="input-container">
+        <view class="txt-password">密码</view>
+        <input bindinput="updateFormData" data-key="password" type="password" value="{{formData.password}}" class="acc-input password txt-input J_ping" placeholder="请输入密码" autocomplete="off" />
+        <!-- <view class="icon icon-clear" style="display: none;"></view>
+        <view class="label-checkbox J_ping">
+          <input id="onOff_pwd" type="checkbox" />
+          <view class="checkbtn">
+          </view>
+        </view> -->
+      </view>
+      <view id="input-code" class="input-container" style="display:none;">
+        <view class="txt-imgverify">验证码</view>
+        <input id="code" class="acc-input imgverify J_ping" type="text" placeholder="请输入图片验证码" autocomplete="off" onkeyup="CtoH(this);" />
+        <view class="code-box">
+          <view id="imgCode" src="" alt="" class="J_ping" report-eventid="MLoginRegister_PicVerifyRefresh" />
+        </view>
+        <view class="icon icon-clear"></view>
+      </view>
+    </view>
+
+    <!--短信验证登录-->
+    <!-- <view id="sms_login" class="login-wrap">
+      <view id="img_code_box" class="input-container" style="display:none;">
+         <input class="acc-input sms-img-verify J_ping" id="smsCode" 
+         type="text" placeholder="请输入图片验证码"/>
+        <view class="sms-code-box">
+           <view id="smsImgCode" class="J_ping"/> 
+        </view>
+        <view class="icon icon-clear"></view>
+      </view>
+      <view class="sms-input-box">
+        <view class="input-container">
+          <view class="area-box J_ping">
+            <view class="area_code" code="86">+86</view>
+            <view class="area_icon"></view>
+          </view>
+           <input type="tel" id="telphone" class="acc-input telphone sms-txt-input J_ping" placeholder="请输入手机号"/> 
+          <view class="icon icon-clear"></view>
+        </view>
+        <button class="mesg-code mesg-disable J_ping">获取验证码</button>
+      </view>
+      <view class="input-container">
+         <input id="telCode" class="acc-input telCode sms-txt-input J_ping" type="text"
+          placeholder="请输入收到的验证码" autocomplete="off"/> 
+        <view class="icon icon-clear"></view>
+      </view>
+    </view> -->
+
+    <view class="notice"></view>
+    <view id="loginBtn" bindtap="submit" class="btn J_ping {{(formData.email&&formData.password)?'btn-active':''}}">登 录</view>
+    <view class="notice"></view>
+    <navigator url="/pages/register/register" id="loginBtn" class="btn J_ping">注 册</navigator>
+    <!-- <view class="quick-nav clearfix" style="display:;">
+      <view class="J_ping findpwd">
+        <view class="icon icon-clock"></view>
+        <view class="txt-findpwd">忘记密码</view>
+      </view>
+      <view class="J_ping quickReg">
+        <view class="icon icon-reg"></view>
+        <view class="txt-quickReg">手机快速注册</view>
+      </view>
+
+    </view> -->
+
+    <!-- <view class="quick-login" style="display:">
+      <view class="txt-otherLogin">其他登录方式</view>
+      <view class="J_ping quick-qq">
+        <view class="icon icon-qq"></view>
+      </view>
+      <view class="J_ping quick-wx" style="display:">
+        <view class="icon icon-wx"></view>
+      </view>
+      <view class="J_ping quick-money" style="display:none">
+        <view class="icon icon-money"></view>
+      </view>
+      <view class="agreement-tips">
+        <view>登录即代表您已同意
+          <view>隐私政策</view>
+        </view>
+      </view>
+    </view> -->
+  </view>
+</view>

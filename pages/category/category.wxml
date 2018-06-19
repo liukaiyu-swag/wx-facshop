@@ -1,0 +1,26 @@
+<view class="header-search-form">
+  <view class="header-search-box" style="margin-right: 32px;">
+    <view class="header-search-input">
+      <view id="search-input-left-icon" class="header-icon-fdj"></view>
+      <view class="hilight2">
+        搜索
+      </view>
+    </view>
+  </view>
+</view>
+
+<scroll-view class="left" scroll-y="true">
+  <view class="li {{index==current?'active':''}}" wx:for="{{categories}}" wx:key="{{index}}" bindtap="fn" data-id="{{index}}">
+    {{item.name}}
+  </view>
+</scroll-view>
+
+<scroll-view class="right" scroll-y="true">
+  <block wx:if="{{categories[current].child}}">
+    <navigator url="/pages/product_list/product_list?id={{f._id}}" class="dd" wx:for="{{categories[current].child}}" wx:key="{{f._id}}" wx:for-item="f">
+      <view class="pic" style="background:#eee url({{f.thumbnail}}) no-repeat center center/ 100% auto">
+      </view>
+      <view class="name">{{f.name}}</view>
+    </navigator>
+  </block>
+</scroll-view>

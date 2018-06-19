@@ -1,0 +1,34 @@
+<!--pages/vendors_info/vendors_info.wxml-->
+<view class="header-search-form">
+  <view class="header-search-box" style="margin-right: 32px;">
+    <view class="header-search-input">
+      <view id="search-input-left-icon" class="header-icon-fdj"></view>
+      <view class="hilight2">
+        搜索
+      </view>
+    </view>
+  </view>
+</view>
+
+<scroll-view class="left" scroll-y="true">
+  <view 
+  class="li {{index==current?'active':''}}"
+   wx:for="{{vendors_info}}" wx:key="{{index}}" bindtap="fn" data-id="{{index}}">
+    {{index}}
+  </view>
+</scroll-view>
+
+<scroll-view class="right" scroll-y="true">
+  <block wx:if="{{vendors_info[current]}}">
+    <view  class="dd" wx:for="{{vendors_info[current]}}" wx:key="{{index}}" wx:for-item="f">
+      <!-- <view class="pic" style="background:#eee url({{f.thumbnail}}) no-repeat center center/ 100% auto">
+      </view> -->
+      <view class="name">{{f.name.value}}</view>
+      <view class="address">地址 : {{f.address.value}}</view>
+      <view class="tel">固话 : {{f.tel.value}}</view>
+      <view class="sh_tel">售后 : {{f.sh_tel.value}}</view>
+      <view class="manager">{{f.manager.value}}</view>
+      <view class="man_tel">{{f.man_tel.value}}</view>
+    </view>
+  </block>
+</scroll-view>

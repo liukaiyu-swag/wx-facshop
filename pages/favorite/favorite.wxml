@@ -1,0 +1,8 @@
+<!--pages/favorite/favorite.wxml-->
+<view wx:for="{{favorite_list}}" wx:key="{{index}}">
+  {{item.name}}
+</view>
+
+<view class="container">
+  <view></view>
+</view>

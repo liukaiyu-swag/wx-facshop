@@ -1,0 +1,42 @@
+<view wx:if="{{isEmpty}}" class="empty">
+  购物车空空如也~
+</view>
+<view wx:else>
+  <view class="wrap">
+    <view class="ul">
+      <view bindtap="showDetail" data-id="{{item.product_id}}" class="li" wx:key="{{index}}" wx:for="{{cart_info.products}}">
+        <view bindtap="toggleSelectOne" data-id="{{item.item_id}}" data-active="{{item.active}}"  catchtap class="check checkbox {{item.active?'active':''}}">
+        </view>
+        <view class="pic" style="background-image:url(http:{{item.img_url}})"></view>
+        <view class="desc">
+          <view class="name">{{item.name}}</view>
+          <view style="display:flex;">
+            <view class="attr" wx:for-index="k" wx:for-item="v" wx:for="{{item.spu_options}}">
+              {{k}}:{{v}}
+            </view>
+          </view>
+          <view class="price">{{item.product_price}}</view>
+          <view catchtap style="display:flex;font-size:24rpx;color:#666">
+            <view class="minus" bindtap="updateInfo" data-id="{{item.item_id}}" data-type="less_one" >-</view>
+            <view class="number">{{item.qty}}</view>
+            <view class="plus" bindtap="updateInfo" data-id="{{item.item_id}}" data-type="add_one">+</view>
+          </view>
+        </view>
+        <view bindtap="updateInfo"  catchtap data-id="{{item.item_id}}" data-type="remove" class="delete">
+          删除
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="fixed">
+    <view class="cart">
+      <view class="checkbox {{selectedAll?'active':''}}" bindtap="toggleSelectAll"></view>
+      全选
+    </view>
+    <view class="add">
+      总计 ： {{cart_info.product_total}}
+    </view>
+    <view class="buy" bindtap=""> 立即购买</view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<!--pages/customer_info/customer_info.wxml-->
+<view wx:for="{{customer_info}}" wx:key="{{index}}">
+  {{item.name.value}}
+  <!-- {{item.man_tel.value}} -->
+</view>

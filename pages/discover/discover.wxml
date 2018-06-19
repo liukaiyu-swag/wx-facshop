@@ -1,0 +1,38 @@
+<view class="wrap">
+  <view class="ul">
+    <navigator hover-class="none" class="li" url="">
+
+      <view class="icon hy"></view>
+      <view class="text">行业信息</view>
+      <view class="enter-icon"></view>
+
+    </navigator>
+  </view>
+
+  <view class="ul">
+
+    <navigator hover-class="none" class="li" url="/pages/vendors_info/vendors_info">
+
+      <view class="icon sj"></view>
+      <view class="text">商家信息</view>
+      <view class="enter-icon"></view>
+
+    </navigator>
+
+    <navigator hover-class="none" class="li" url="/pages/customer_info/customer_info">
+
+      <view class="icon kh"></view>
+      <view class="text">客户信息</view>
+      <view class="enter-icon"></view>
+
+    </navigator>
+  </view>
+
+  <view class="ul">
+    <navigator hover-class="none" class="li">
+      <view class="icon wl"></view>
+      <view class="text">物流信息</view>
+      <view class="enter-icon"></view>
+    </navigator>
+  </view>
+</view>

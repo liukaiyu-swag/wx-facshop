@@ -1,0 +1,57 @@
+<view class="myheader">
+  <view class="my-pic" style="width:200rpx;height:200rpx;border-radius:50%;background:url({{pic}}) no-repeat center center/ 100% auto"></view>
+  <view class="email"></view>
+  <view class="firstname"></view>
+</view>
+
+
+<view class="wrap">
+  <view class="ul">
+    <navigator url="/pages/favorite/favorite" hover-class="none" class="li">
+      <view class="icon kh"></view>
+      <view class="text">收藏的商品</view>
+      <view class="enter-icon"></view>
+    </navigator>
+
+    <!-- <navigator url="/pages/cart/cart" hover-class="none" class="li">
+      <view class="icon kh"></view>
+      <view class="text">购物车</view>
+      <view class="enter-icon"></view>
+    </navigator> -->
+
+    <navigator url="/pages/cart/cart" hover-class="none" class="li">
+      <view class="icon sj"></view>
+      <view class="text">浏览记录</view>
+      <view class="enter-icon"></view>
+    </navigator>
+
+  </view>
+
+  <view class="ul">
+    <navigator url="/pages/favorite/favorite" hover-class="none" class="li">
+      <view class="icon kh"></view>
+      <view class="text">我的订单</view>
+      <view class="enter-icon"></view>
+    </navigator>
+    <navigator url="/pages/favorite/favorite" hover-class="none" class="li">
+      <view class="icon sj"></view>
+      <view class="text">我的地址</view>
+      <view class="enter-icon"></view>
+    </navigator>
+
+  </view>
+
+  <view class="ul">
+    <navigator url="/pages/favorite/favorite" hover-class="none" class="li">
+      <view class="icon kh"></view>
+      <view class="text">通用</view>
+      <view class="enter-icon"></view>
+    </navigator>
+    <navigator url="/pages/favorite/favorite" hover-class="none" class="li">
+      <view class="icon sj"></view>
+      <view class="text">设置</view>
+      <view class="enter-icon"></view>
+    </navigator>
+
+  </view>
+</view>

@@ -1,0 +1,124 @@
+<swiper indicator-dots="true" style="height:750rpx;min-height:750rpx">
+  <swiper-item wx:for="{{product_data.image_detail}}" wx:key="{{index}}">
+    <view class="swiper-item" style="height:750rpx; background:url(http:{{item}}) no-repeat center center / 100% auto"></view>
+  </swiper-item>
+</swiper>
+
+<view class="fn_wrap">
+  <view class="fn_goods_name">
+    <view class="fn_text_wrap">
+      {{product_data.name}}
+    </view>
+    <view bindtap="addToFavorite" class="heart"></view>
+  </view>
+
+</view>
+<view class="price_wrap">
+  <view class="price">
+    {{product_data.price_info.price.symbol}}
+    <view style="display:inline-block;font-size:36rpx">{{product_data.price_info.price.value}}</view>
+  </view>
+  <view class="col_right">
+    <!-- {{product_data.reviw_rate_star_average}} -->
+  </view>
+</view>
+
+<view class="detail_gap"></view>
+
+<view class="sku_wrap">
+  <view class="propertyDiv" wx:for="{{product_data.options}}" wx:key="{{index}}">
+    <view class="sku">
+      <view class="h3">{{item.label}}</view>
+
+      <view class="sku_list">
+        <view bindtap="changeProperty" data-oid="{{f._id.$oid}}" wx:for="{{item.value}}" wx:for-item="f" wx:key="f._id.$oid" class="option {{f.active=='current'?'option_selected':''}} ">
+          {{f.attr_val}}
+        </view>
+      </view>
+
+    </view>
+  </view>
+  <view class="propertyDiv">
+    <view class="sku sku_num">
+      <view class="h3">数量</view>
+      <view class="num_wrap">
+        <view bindtap="minusSkuNum" class="minus {{sku_num ===1 ? 'minus_disabled':''}}">
+          -
+        </view>
+        <input type="number" bindinput="setSkuNum" class="num" value="{{sku_num}}" />
+        <view class="plus" bindtap="plusSkuNum">
+          +
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<view class="detail_gap"></view>
+
+
+
+<view class="detail_gap"></view>
+
+<view class="tab-head">
+  <view class="tab-head-item {{visibleTabKey==item.key?'active':''}}" data-key="{{item.key}}" wx:key="{{index}}" wx:for="{{[{name:'厂家',key:'vendors'},{name:'描述',key:'desc'}]}}" bindtap="changeVisibleKey">
+    {{item.name}}
+  </view>
+</view>
+
+<view class="tab-item" style="display:{{visibleTabKey=='vendors'?'block':'none'}}">
+
+</view>
+
+<view class="tab-item" style="display:{{visibleTabKey=='desc'?'block':'none'}}">
+  <view class="content-block">
+    <view class="tabs">
+      <view id="tab1" class="tab active">
+        <view class="content-block">
+          <view class="text-description">
+
+
+            <view class="table" style="margin-bottom:40rpx">
+              <view class="tr" wx:for="{{product_data.groupAttrArr}}" wx:key="{{index}}">
+                <view class="td">{{index}}</view>
+                <view class="td">{{item}}</view>
+              </view>
+            </view>
+
+            <!-- <view style="margin-bottom:40rpx">
+              <view id="result_box" lang="zh-CN">
+                <view>颜色：黑色，蓝色，灰色，红色，白色</view>
+                <view>尺寸：M，L，XL，2XL</view>
+                <view>类别：女装 上衣 T恤＆T恤</view>
+                <view>材质：人造丝，氨纶</view>
+                <view>服装长度：定期</view>
+                <view>袖长：短</view>
+                <view>衣领：歪斜领</view>
+                <view>风格：休闲</view>
+                <view>季节：夏季</view>
+                <view>图案类型：花卉</view>
+                <view>重量：0.3400kg</view>
+                <view>包装内容：1 x T恤</view>
+              </view>
+            </view> -->
+
+            <view class="img-section">
+              <view style="background-image:url(http:{{item}})" wx:key="{{index}}" wx:for="{{product_data.image_detail}}" class="lazy"></view>
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="fixed">
+  <navigator open-type="navigateTo" url="/pages/cart_two/cart_two" class="cart">
+    购物车
+    <view class="">+{{sku_num}}</view>
+    <view class="icon">{{items_count}}</view>
+  </navigator>
+  <view class="add" bindtap="addToCart"> 加入购物车</view>
+  <view class="buy" bindtap=""> 立即购买</view>
+</view>

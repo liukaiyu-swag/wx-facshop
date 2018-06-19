@@ -1,0 +1,82 @@
+/* pages/login/login.wxss */
+
+.login-tab {
+  line-height: 88rpx;
+  font-size: 28rpx;
+  border-bottom: 1px solid #d7d7d7;
+  overflow: hidden;
+  text-align: center;
+}
+
+.username-login {
+  width: 50%;
+  float: left;
+}
+
+.sms-login {
+  width: 50%;
+  display: inline-block;
+}
+
+.login-selected>view {
+  border-bottom: 2px solid #f23030;
+  padding: 0.13rem 0.1rem;
+}
+
+.wrap {
+  max-width: 750rpx;
+  margin: 0 auto;
+  padding: 0 40rpx 40rpx 40rpx;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 96rpx;
+  line-height: 96rpx;
+  overflow: hidden;
+  padding: 0 10rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #d7d7d7;
+}
+
+input {
+  display: block;
+}
+
+.txt-username, txt-password {
+  width: 120rpx;
+  font-size: 28rpx;
+}
+
+.username, .password {
+  width: 530rpx;
+  font-size: 28rpx;
+  padding: 0 60rpx 0 120rpx；;
+}
+
+.txt-password {
+  font-size: 28rpx;
+}
+
+.notice {
+  height: 30rpx;
+}
+
+.btn {
+  height: 90rpx;
+  line-height: 92rpx;
+  background-color: #eee;
+  border-radius: 2rpx;
+  border: 0;
+  text-align: center;
+  font-size: 28rpx;
+  color: #848689;
+}
+.btn-active {
+    background-color: #f23030;
+    color: #fff;
+}
